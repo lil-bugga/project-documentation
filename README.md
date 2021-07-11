@@ -1,8 +1,17 @@
 # Lil Bugga
 
-[]()
+- [Project Links](#description-of-the-website)
+- [Project Description](#purpose)
+- [Project Features](#features)
+- [Target Audience](#target-audience)
+- [Tech Stack](#tech-stack)
+- [Dataflow Diagram](#dataflow-diagram)
+- [Application Architecture Diagram](#application-architecture-diagram)
+- [User Stories](#user-stories)
+- [Wireframes](#wireframes)
+- [Project Management](#project-management)
 
-## R1 - Description of the Website
+## Description of the Website
 
 About the project
 
@@ -75,11 +84,11 @@ The product will also be used by **stakeholders of the product** who wish to log
 - Material UI
 - Jest
 
-## R2 - Dataflow Diagram
+## Dataflow Diagram
 
-## R3 - Application Architecture Diagram
+## Application Architecture Diagram
 
-## R4 - User Stories
+## User Stories
 
 ### Definitions
 
@@ -147,9 +156,9 @@ As an **Owner** I want to be able to:
 - Give project ownership to another User, so that if I am stepping down as the Project owner, the virtual Project’s administration can be changed accordingly.
 - Edit the details of the Project, so that it stays accurately in sync with the real life project.
 
-## R5 - Wireframes
+## Wireframes
 
-## R6 - Project Management
+## Project Management
 
 LINK: []()
 
