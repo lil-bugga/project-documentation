@@ -1,6 +1,6 @@
-# Full Stack App TITLE
+# Lil Bugga
 
-TOC
+[]()
 
 ## R1 - Description of the Website
 
@@ -12,31 +12,68 @@ About the project
 
 ### Purpose
 
-### Functionality & Features
+Lil Bugga is a professional and light bug tracking platform, intended to act as companion tracking software during a project's construction and maintenance. It gives both the development team and stakeholders the ability to flag functions and features of the application in need of change, and have it addressed and tracked clearly and effectively.
 
-**Functionality**
+### Features
 
-MVP:
+#### MVP
 
-- MVP function 1
+You are able to:
 
-Other:
+- Login to the application and enter your details in a secure manner.
+- Create a virtual Project, with a name, description, logo, and associated team members.
+- Search through Projects you are associated with or own, and go to that Project’s dashboard to quickly view its current status.
+- Become part of a Project team in a role that permits you to perform actions relevant to your position.
+- View the tickets associated with the Project, to see what issues have already been flagged and what status the Project is in.
+- Create Tickets for the Project you are associated with, to flag bugs or changes that need to be made.
+- Respond to Ticket updates as the Development Team responds to the Ticket, to ensure that it gets adequately resolved.
+- See Tickets that have been assigned to you as a Developer, and collaborate with its originator as you work through its resolution.
+- Close, open, or delete Tickets to a Project, so long as you are a Project Administrator or Owner.
+- Change User roles for a Project that I own, to ensure stakeholders only have the access to change Tickets relevant to their position.
+- Edit the details of a Project that I own, to keep its information relevant.
 
-- Other function 1
+System Administrators are able to:
 
-**Features**
+- View and monitor all Projects and Tickets available on the system.
+- Delete any Project or Ticket on the system considered offensive, or spam.
 
-MVP:
+#### Bonus Features
 
-- MVP function 1
-
-Other:
-
-- Other function 1
+- Live updating Ticket entries, without needing a page refresh.
+- The ability to login using a GitHub or Google account.
+- Export all Tickets associated with a Project in various formats for convenient data entry or viewing.
+- Import tickets in various formats for convenient data entry
+- Add users who do not yet have an account via their email, to avoid needing to give them permission at a later date.
+- Allow users to customise their colour theme or choose from several premade options.
+- Front and back end pagination for Tickets.
+- User inbox system, with the last session stored on the backend.
 
 ### Target Audience
 
+This product is intended for **Development Teams** that want a light and dedicated solution to tracking bugs found in their product. 
+
+>This type of user is expected to be working on some form of Software Project, they have a technical understanding of what the project is, how it works, and the technology behind it. They are computer literate and need a platform that is fast to load, responsive to their various devices and has a colour scheme that doesn’t irritate their eyes (which have probably been locked onto a computer screen for many hours).
+
+The product will also be used by **stakeholders of the product** who wish to log issues they are having with the system.
+
+>These users might not have a technical background, but they understand what graphical or experiential inconsistency they believe needs to be addressed. They need a platform that is simple and intuitive to navigate, so they can quickly find the Project they are associated with. And just as quickly, create a Ticket that can accurately represent the issue they are having.
+
 ### Tech Stack
+
+#### Back-end
+
+- Ruby on Rails
+- PostgreSQL
+- RSpec
+
+#### Front-end
+
+- JavaScript
+- React
+- HTML
+- CSS 
+- Material UI
+- Jest
 
 ## R2 - Dataflow Diagram
 
