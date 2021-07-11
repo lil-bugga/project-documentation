@@ -44,7 +44,71 @@ Other:
 
 ## R4 - User Stories
 
-- [] As a {x} I want to {y} so that I can {z}
+### Definitions
+
+**Ticket:** A Ticket is a small report which represents a bug or issue detected on the real life project. It can be created and monitored by a Client, but only a Developer, Admin, Owner, or the Client who created the ticket may respond to it.
+
+**Project:** A virtual project instance to which Tickets can be lodged, viewed by others, and ultimately resolved. Simply, a Project refers to the virtual representation of a body of work found on Lil Bugga, it includes the real life projects name, a description, Owner, Tickets, and associated Clients, Developers, and Admin.
+
+**User:** Someone using the software, not necessarily logged in.
+
+**System Administrator:** A logged in User, with administrative privileges over the Lil Bugga platform and it’s content.
+
+_Definitions scoped to a Project instance:_
+
+**Client:** A logged in User with base level access to the project. This is the status given to software testers not on the technical team.
+
+**Developer:** A logged in User with powers of a Client, and the ability to respond to all Client tickets. This is the status given to most software developers.
+
+**Administrator:** A logged in User with powers of a Developer, and the ability to open, close and remove tickets based on their perceived resolution. This is the status given to project arbiters.
+
+**Owner:** A logged in User who is the sole owner of a project, and can create, alter, and destroy all aspects of it unchallenged. This is the project lead administrator responsible for the project overall.
+
+### Stories
+
+As a **User** I want to be able to:
+
+- Create an account on the platform, so my activities with the tool are unique to me.
+- Sign in and navigate the application, so that my projects and tickets are only available to me.
+- Update my account details, to keep my account safe and up to date.
+- See projects I am included in, and know what my authority for that project is, for ease of use.
+- Search through the projects I am participating in, so that I can quickly find the project I am looking for.
+- Create a virtual project, to track the bugs that occur within my real life software project.
+
+As a **System Administrator** I want to be able to:
+
+- Remove spam or offensive content found within Projects on the platform, to prevent software misuse.
+- Moderate all Projects, Tickets, and Users present on the system, to aid in manually protecting the integrity of the system.
+- Have ultimate access and authority over the application, in order to moderate the Projects, Tickets, and Users.
+
+As a **Client** I want to be able to:
+
+- Create a Ticket for the project based on bugs I detect or issues I have with the software, so the development team can see that issue and address it.
+- Watch that ticket be addressed by the development team and respond to them when changes are made or questions arise, so that the development team can achieve a resolution to the Ticket.
+- View the status of the Tickets I have posted, so I can know when or if the attributed fix has been made.
+- See all Tickets associated with the Project, so I know if my issue has already been raised by someone else.
+- View a dashboard of the project, so I can get a brief overview of the project status and see what progress has been made at a glance.
+
+As a **Developer** I want to be able to:
+
+- Do all the things a Client can do, so that I can access the Project, and raise issues as I see them as well.
+- See the tickets assigned to me, so that I know what I could or should be working on as assigned by the Project Administrator.
+- Assign tickets to myself, so that I can resolve issues that may be related to tickets I have already been assigned.
+- Address tickets assigned to me, so that I can get the real life project closer to error free functionality as part of transient or ongoing maintenance.
+
+As an **Administrator** I want to be able to:
+
+- Do all the things a Developer can do, so that I can participate in Project Ticket resolution, whilst simultaneously being an authority over Ticket resolution.
+- Close a Ticket that I deem adequately addressed, so that the development team can prioritize unresolved Tickets.
+- Delete a Ticket that is deemed poor quality, offensive, or spam, so that the Project is not littered with redundant or unnecessary Tickets.
+- Reopen a Ticket that may have been accidentally closed, or wrongfully judged as addressed, to avoid having to recreate a new Ticket on such an occasion.
+
+As an **Owner** I want to be able to:
+
+- Add team members to the project, so they can access and resolve tickets.
+- Modify Project collaborators authority levels, so they only have the feature access they need to participate in the Project.
+- Give project ownership to another User, so that if I am stepping down as the Project owner, the virtual Project’s administration can be changed accordingly.
+- Edit the details of the Project, so that it stays accurately in sync with the real life project.
 
 ## R5 - Wireframes
 
