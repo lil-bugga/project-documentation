@@ -86,7 +86,11 @@ The product will also be used by **stakeholders of the product** who wish to log
 
 ## Dataflow Diagram
 
+![0-Level Dataflow Diagram](./docs/2021-07-11-DFD-0Level.svg)
+
 ## Application Architecture Diagram
+
+![Architecture Diagram](./docs/2021-07-12-Diagram-Architecture.png)
 
 ## User Stories
 
