@@ -162,6 +162,25 @@ As an **Owner** I want to be able to:
 
 ## Wireframes
 
+**Landing Page:**
+![Wireframe - Landing](./docs/wireframes/Landing.png)
+**Login Page:**
+![Wireframe - Login](./docs/wireframes/Login.png)
+**User Dashboard:**
+![Wireframe - Dashboard](./docs/wireframes/Dashboard.png)
+**Account Settings:**
+![Wireframe - Account Settings](./docs/wireframes/Account_Settings.png)
+**Create Project:**
+![Wireframe - Create Project](./docs/wireframes/Create_Project.png)
+**Project Dashboard:**
+![Wireframe - Project Dashboard](./docs/wireframes/Project_Dashboard.png)
+**Project Tickets:**
+![Wireframe - Project Tickets](./docs/wireframes/Project_Tickets.png)
+**Create Tickets:**
+![Wireframe - Create Ticket](./docs/wireframes/Create_Ticket.png)
+**Ticket View:**
+![Wireframe - Ticket View](./docs/wireframes/Ticket_View.png)
+
 ## Project Management
 
 **Project Board Links:**
