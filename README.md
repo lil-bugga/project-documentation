@@ -208,6 +208,15 @@ In this way, we are both across progress in the project, and the entirety of our
 
 ### Screenshots - Project Documentation
 
+**2021-11-07 Morning**
+![2021-07-11-Screenshot-Trello-Morning](./docs/2021-07-11-Screenshot-Trello.png)
+**2021-11-07 Afternoon**
+![2021-07-11-Screenshot-Trello-Afternoon](./docs/2021-07-11-Screenshot-Trello-1.png)
+**2021-12-07 Morning**
+![2021-07-12-Screenshot-Trello-Morning](./docs/2021-07-12-Screenshot-Trello.png)
+**2021-12-07 Afternoon**
+![2021-07-12-Screenshot-Trello-Afternoon](./docs/2021-07-12-Screenshot-Trello-1.png)
+
 ### Screenshots - Front-End
 
 ### Screenshots - Back-End
