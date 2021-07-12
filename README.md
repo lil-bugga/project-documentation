@@ -160,11 +160,35 @@ As an **Owner** I want to be able to:
 
 ## Project Management
 
-LINK: []()
+**Project Board Links:**
+
+- [Documentation](https://trello.com/b/M6Si7LVG/lil-bugga)
+- [Front-End](https://trello.com/b/XMPa9Hot/lil-bugga-front-end)
+- [Back-End](https://trello.com/b/z0PAejSN/lil-bugga-back-end)
 
 ### Methodology
 
-Implementation:
+The project management of Lil-Bugga is handled using multiple Trello Kanban boards to represent different logical components of the project.
+Each team member has then taken over-arching responsibility for a different component of the project:
+
+- There is one project board for the project documentation, for which we have both taken responsibility.
+- Another project board for the projects Front-End, for which Dean has taken responsibility.
+- Finally, there is another project board for the projects Back-End, for which Ryan has taken responsibility.
+
+We opted for this strategy to ensure that each part of the project has one person dedicated to driving it. The person driving the project component ultimately populates the board with its overall tasks, assigns them difficulty and a responsible person. They then follow up with the team member assigned to each task as it progresses.
+
+Assignment of tasks is handled during our daily stand-ups, where we discuss timelines for different tasks, our progress with assigned tasks, and any issues we may be facing. As a part of the stand-up process, we walk the other team member through what we have been doing and seek input on decisions that we have made.
+
+When the person responsible for a task deems it as complete, they move it to "pending review" on the Trello board, and if appropriate, make a pull request for the feature on GitHub. The other team member then reviews either the piece of work or the pull request and discusses it with the responsible person in the morning stand-up or a dedicated meeting. They will suggest any changes they deem necessary and commit finalised work to the repository or primary document.
+
+In this way, we are both across progress in the project, and the entirety of our scope of work. The separation of project boards allows us to assign ownership both at a task level and at a project level for different components.
+
+### Screenshots - Project Documentation
+
+### Screenshots - Front-End
+
+### Screenshots - Back-End
+
 
 - Any kanban system is fine
 - Tickets assigned to members
