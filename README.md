@@ -5,6 +5,7 @@
 - [Project Features](#features)
 - [Target Audience](#target-audience)
 - [Tech Stack](#tech-stack)
+- [Entity Relationship Diagram](#entity-relationship-diagram)
 - [Dataflow Diagram](#dataflow-diagram)
 - [Application Architecture Diagram](#application-architecture-diagram)
 - [User Stories](#user-stories)
@@ -13,11 +14,10 @@
 
 ## Description of the Website
 
-About the project
-
-- Deployed Link: []()
-- GitHub Link Front-end []()
-- GitHub Link Back-end []()
+- [Front-end GitHub](https://github.com/lil-bugga/lil-bugga-front-end)
+- [Back-end GitHub](https://github.com/lil-bugga/lil-bugga-back-end)
+- [Project-Documentation GitHub](https://github.com/lil-bugga/project-documentation)
+- Deployed Link Not Yet Available
 
 ### Purpose
 
@@ -59,7 +59,7 @@ System Administrators are able to:
 
 ### Target Audience
 
-This product is intended for **Development Teams** that want a light and dedicated solution to tracking bugs found in their product. 
+This product is intended for **Development Teams** that want a light and dedicated solution to tracking bugs found in their product.
 
 >This type of user is expected to be working on some form of Software Project, they have a technical understanding of what the project is, how it works, and the technology behind it. They are computer literate and need a platform that is fast to load, responsive to their various devices and has a colour scheme that doesn’t irritate their eyes (which have probably been locked onto a computer screen for many hours).
 
@@ -74,15 +74,21 @@ The product will also be used by **stakeholders of the product** who wish to log
 - Ruby on Rails
 - PostgreSQL
 - RSpec
+- Bcrypt
+- Knock
 
 #### Front-end
 
 - JavaScript
 - React
 - HTML
-- CSS 
-- Material UI
+- CSS
+- Bootstrap - React
 - Jest
+
+## Entity Relationship Diagram
+
+![Entity Relationship Diagram](docs/2021-07-16-ERD.png)
 
 ## Dataflow Diagram
 
@@ -209,48 +215,53 @@ In this way, we are both across progress in the project, and the entirety of our
 ### Screenshots - Project Documentation
 
 **2021-11-07 Morning**
-![2021-07-11-Screenshot-Trello-Morning](./docs/2021-07-11-Screenshot-Trello.png)
+![2021-07-11-Screenshot-Trello-Morning](./docs/2021-07-11-Screenshot-Trello-PD.png)
+
 **2021-11-07 Afternoon**
-![2021-07-11-Screenshot-Trello-Afternoon](./docs/2021-07-11-Screenshot-Trello-1.png)
+![2021-07-11-Screenshot-Trello-Afternoon](./docs/2021-07-11-Screenshot-Trello-PD1.png)
+
 **2021-12-07 Morning**
-![2021-07-12-Screenshot-Trello-Morning](./docs/2021-07-12-Screenshot-Trello.png)
+![2021-07-12-Screenshot-Trello-Morning](./docs/2021-07-12-Screenshot-Trello-PD.png)
+
 **2021-12-07 Afternoon**
-![2021-07-12-Screenshot-Trello-Afternoon](./docs/2021-07-12-Screenshot-Trello-1.png)
+![2021-07-12-Screenshot-Trello-Afternoon](./docs/2021-07-12-Screenshot-Trello-PD1.png)
+
+**2021-16-07 Afternoon**
+![2021-07-16-Screenshot-Trello-Afternoon](./docs/2021-07-16-Screenshot-Trello-PD1.png)
 
 ### Screenshots - Front-End
 
+**2021-13-07 Morning**
+![2021-07-13-Screenshot-Trello-Morning](./docs/2021-07-13-Screenshot-Trello-FE1.png)
+
+**2021-13-07 Afternoon**
+![2021-07-13-Screenshot-Trello-Afternoon](./docs/2021-07-13-Screenshot-Trello-FE2.png)
+
+**2021-14-07 Morning**
+![2021-07-14-Screenshot-Trello-Morning](./docs/2021-07-14-Screenshot-Trello-FE1.png)
+
+**2021-14-07 Afternoon**
+![2021-07-14-Screenshot-Trello-Afternoon](./docs/2021-07-14-Screenshot-Trello-FE2.png)
+
+**2021-15-07 Morning**
+![2021-07-15-Screenshot-Trello-Morning](./docs/2021-07-15-Screenshot-Trello-FE1.png)
+
+**2021-15-07 Afternoon**
+![2021-07-15-Screenshot-Trello-Afternoon](./docs/2021-07-15-Screenshot-Trello-FE2.png)
+
+**2021-16-07 Morning**
+![2021-07-16-Screenshot-Trello-Morning](./docs/2021-07-16-Screenshot-Trello-FE1.png)
+
+**2021-16-07 Afternoon**
+![2021-07-16-Screenshot-Trello-Afternoon](./docs/2021-07-16-Screenshot-Trello-FE2.png)
+
 ### Screenshots - Back-End
 
+**2021-15-07**
+![2021-07-13-Screenshot-Trello](./docs/2021-07-15-Screenshot-Trello-BE.png)
 
-- Any kanban system is fine
-- Tickets assigned to members
-- Tickets assigned difficulty level
-- Tickets referenced in git commits
+**2021-16-07 Morning**
+![2021-07-13-Screenshot-Trello-Morning](./docs/2021-07-16-Screenshot-Trello-BE.png)
 
-Set-Up:
-
-Process:
-
-- Task Assignment
-- Task deadlines
-- Handling Delays
-- Issues
-
-### Stand-Ups
-
-### Screenshots
-
-## Part B
-
-- Description of libraries utilised in readme file
-- Comment function intent inline
-- Gitflow includes commit, merge & pull requests.
-  - Commits to reference task in project plan
-- Stick to a good project plan
-- App works
-- Cloud host utilises env vars & custom domain name
-- Intuitive UI
-- Evidence User testing (track with spreadsheets)
-  - Both dev and prod
-- Unit and integration testing with 90% coverage
-  - Min 5 automated tests in front & back end systems
+**2021-16-07 Afternoon**
+![2021-07-13-Screenshot-Trello-Afternoon](./docs/2021-07-16-Screenshot-Trello-BE2.png)
