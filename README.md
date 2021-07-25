@@ -5,6 +5,7 @@
 - [Project Features](#features)
 - [Target Audience](#target-audience)
 - [Tech Stack](#tech-stack)
+- [Libraries](#libraries)
 - [Entity Relationship Diagram](#entity-relationship-diagram)
 - [Dataflow Diagram](#dataflow-diagram)
 - [Application Architecture Diagram](#application-architecture-diagram)
@@ -17,6 +18,10 @@
 - [Front-end GitHub](https://github.com/lil-bugga/lil-bugga-front-end)
 - [Back-end GitHub](https://github.com/lil-bugga/lil-bugga-back-end)
 - [Project-Documentation GitHub](https://github.com/lil-bugga/project-documentation)
+- [Front-end Trello](https://trello.com/b/XMPa9Hot/lil-bugga-front-end)
+- [Back-end Trello](https://trello.com/b/z0PAejSN/lil-bugga-back-end)
+- [Hosted Front-end](https://lil-bugga.netlify.app/)
+- [Hosted Back-end](https://lil-bugga.herokuapp.com/) NB: API only
 - Deployed Link Not Yet Available
 
 ### Purpose
@@ -73,18 +78,88 @@ The product will also be used by **stakeholders of the product** who wish to log
 
 - Ruby on Rails
 - PostgreSQL
-- RSpec
-- Bcrypt
-- Knock
+- Heroku
+- RSpec testing library
 
 #### Front-end
 
-- JavaScript
 - React
+- JSX
+- Netlify
+- Bootstrap
+- Jest / React Testing Library
+- JavaScript
 - HTML
 - CSS
-- Bootstrap - React
-- Jest
+
+### Libraries
+
+#### Back-end
+
+- Faker
+  - Faker is a gem used to generate fake, realistic-looking data. In this project, it is used solely for testing purposes and for generating realistic-looking seed data quickly. It should have no impact upon production implementation
+- Bcrypt
+  - Bcrypt is a gem that is included by default with a rails package. Whilst it needs to be uncommented in the `Gemfile` it is a useful gem that adds powerful methods for hashing passwords in the application. When enabled in the bundle file it adds the `has_secure_password` method to the project. When configured in the user model it sets a field called `password_confimation` that must be met as well as the regular password input field. If the two passwords match on a POST request Bcrypt hashes the password using its encryption algorithm and stores them in a database field called `password_digest`. Likewise, for authentication it encrypts the received password using the same algorithm and confirms a match.
+- Knock
+  - The Knock gem is used by the project to generate `JWT` bearer tokens used to authenticate users on the site. When a user connects to the site and is authenticated by `Bcrypt` a unique JWT token is generated using knock to identify them and transmitted in the response back. In subsequent requests to the server, if a user is required to authenticate they must post this `JWT token` in the request header. By default, this token is valid for 24 hours. We found this default acceptable and have opted to leave it as is.
+- Rack-cors
+  - `CORS` or Cross Origin Resource Sharing is a service used to authenticate network traffic across the internet. In this implementation, the `cors` gem is used to whitelist different URI's, preventing non-whitelisted domains from being able to submit API requests. Due to implementation issues with Netlify, this is currently set to enable all sources to make requests. Whilst not ideal, the back-end is not using any resources outside of the PostgreSQL database, and because authentication is required so we find the risk is acceptable.
+- RSpec-rails
+  - RSpec is a popular and well-known testing library for rails. I used it to generate my test suite.
+- Factory_bot_rails
+  - The `Factory bot` gem is a helper gem to assist with testing libraries. It allows you to write a framework or scaffold example of a model in a separate file. This scaffold can then be imported into the testing suite and used to build or create model entries to test against. Removing this code from the test files. It is by no means necessary but does simplify the testing implementation.
+- Rails-controller-testing
+  - rails controller testing allows you to make and mock(or imitate) data hitting your API endpoints. This is a useful tool that allows the testing suite to better and more predictably test the logic of controller methods.
+- SimpleCov
+  - SimpleCov generates an HTML file based on testing results allowing you to see a representation of testing done on the files specified. As a metric of test quality, SimpleCov should be seen as unreliable, as it only counts the number of lines your tests read, vs the number of lines actually in the file. However, it does provide some simple insight into the completeness of the test suite.
+- Database_cleaner
+  - Database cleaner is a tool used to complement the test suite. It acts to remove database entries made by the test suite in a way defined in its configuration. In this implementation, once tests have been completed database cleaner will rollback all commits since the initialisation of the test suite, essentially giving you a clean slate to work from.
+
+#### Front-end
+
+- Axios
+  - It's a "Promise based HTTP client for the browser and node.js", which essentially allows you to make requests to external APIs easily, as an alternative to using the Javascript fetch method. Axios was used extensively through the front-end where requests to the back-end needed to be made, and it was an effective and clean way to make the responses.
+- React
+  - A Javascript library for building fast loading user interfaces in web applications. The front-end of lil bugga is built entirely in React, making use of components that render and update to the DOM conditionally, rather than all at once like in a regular application. It was used in many different ways through the application, following the newer functional components way of doing things, making use of Hooks to hold state, set asynchronous events and more.
+- react-chartjs-2
+  - It's a charting library made for one purpose, to chart information, particularly from React applications. It's imported into a project through node modules, and used component-wise. It was used numerous times for the Bar components, which was used to give give users a visual read on where most of their tickets were allocated.
+- Bootstrap (just the CSS)
+  - A framework that allows you to quickly customize the user interface. It acts as a convenience when manipulating CSS, using HTML classes to change visual features over CSS driven by selectors. It helped to cut down on code in this project, and gets used extensively to make divs behave as desired, and to center text.
+- react-bootstrap
+  - A framework that replaces the need for Bootstrap in React applications, giving you the power to create template components like modals and nav-bars without the old dependencies on jQuery etc. It got used alongside Bootstrap for NavBar and Modals, which required javascript configuration. This meant we didn't need the jQuery or the Javascript part of Bootstrap.
+
+## Testing
+
+### Back-end
+
+Primary integration and unit testing for the lil-bugga back-end has been completed using RSpec. To run the test suite, navigate to the root directory of the backend, and run the following command in terminal:
+
+```sh
+bundle install
+rspec -fd
+```
+
+This will run all of the projects rspec tests from the `/spec/` folder. It is also configured to generate a coverage report when run. This is located in `/public/coverage/index.html` after RSpec tests have concluded and can be opened with any web browser.
+
+Note that there were some dependency issues with **simpleCov**, the gem used to help create the coverage report, and it should be considered indicative only.
+
+### Front-end
+
+Unit testing was commenced in the lil-bugga front-end using jest and can be run by navigating to the root directory of the front-end, and running the following command in terminal:
+
+```shell
+yarn install
+yarn test 
+```
+
+or
+
+```shell
+yarn install
+npm run test
+```
+
+Full integration testing was also run using Cypress, however a large number of dependency errors were encountered during this process. To replicate cypress testing please follow the following steps precisely. Failure to do so will cause cypress to delete core dependencies from the node modules folder and brick your clone of the repository.
 
 ## Entity Relationship Diagram
 
