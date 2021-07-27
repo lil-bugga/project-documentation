@@ -6,6 +6,7 @@
 - [Target Audience](#target-audience)
 - [Tech Stack](#tech-stack)
 - [Libraries](#libraries)
+- [Testing](#testing)
 - [Entity Relationship Diagram](#entity-relationship-diagram)
 - [Dataflow Diagram](#dataflow-diagram)
 - [Application Architecture Diagram](#application-architecture-diagram)
@@ -15,14 +16,17 @@
 
 ## Description of the Website
 
-- [Front-end GitHub](https://github.com/lil-bugga/lil-bugga-front-end)
-- [Back-end GitHub](https://github.com/lil-bugga/lil-bugga-back-end)
-- [Project-Documentation GitHub](https://github.com/lil-bugga/project-documentation)
-- [Front-end Trello](https://trello.com/b/XMPa9Hot/lil-bugga-front-end)
-- [Back-end Trello](https://trello.com/b/z0PAejSN/lil-bugga-back-end)
-- [Hosted Front-end](https://lil-bugga.netlify.app/)
-- [Hosted Back-end](https://lil-bugga.herokuapp.com/) NB: API only
-- Deployed Link Not Yet Available
+- GitHub
+  - [Front-end GitHub](https://github.com/lil-bugga/lil-bugga-front-end)
+  - [Back-end GitHub](https://github.com/lil-bugga/lil-bugga-back-end)
+  - [Project-Documentation GitHub](https://github.com/lil-bugga/project-documentation)
+- Trello
+  - [Front-end Trello](https://trello.com/b/XMPa9Hot/lil-bugga-front-end)
+  - [Back-end Trello](https://trello.com/b/z0PAejSN/lil-bugga-back-end)
+  - [Project-Documentation Trello](https://trello.com/b/M6Si7LVG/lil-bugga)
+- Web-Hosting
+  - [Hosted Front-end](https://lil-bugga.netlify.app/)
+  - [Hosted Back-end - NB: API only](https://lil-bugga.herokuapp.com/) 
 
 ### Purpose
 
@@ -130,7 +134,7 @@ The product will also be used by **stakeholders of the product** who wish to log
 
 ## Testing
 
-### Back-end
+### Back-end Testing
 
 Primary integration and unit testing for the lil-bugga back-end has been completed using RSpec. To run the test suite, navigate to the root directory of the backend, and run the following command in terminal:
 
@@ -143,9 +147,9 @@ This will run all of the projects rspec tests from the `/spec/` folder. It is al
 
 Note that there were some dependency issues with **simpleCov**, the gem used to help create the coverage report, and it should be considered indicative only.
 
-### Front-end
+### Front-end Testing
 
-Unit testing was commenced in the lil-bugga front-end using jest and can be run by navigating to the root directory of the front-end, and running the following command in terminal:
+#### To run the Jest test suite.
 
 ```shell
 yarn install
@@ -155,15 +159,126 @@ yarn test
 or
 
 ```shell
-yarn install
+npm install
 npm run test
 ```
 
-Full integration testing was also run using Cypress, however a large number of dependency errors were encountered during this process. To replicate cypress testing please follow the following steps precisely. Failure to do so will cause cypress to delete core dependencies from the node modules folder and brick your clone of the repository.
+#### To test with Cypress
+*Warning: Follow these steps exactly, otherwise you will encounter a NPM compatibility error.*
+
+1. Checkout into the "cypress" branch.
+
+```sh
+git checkout cypress
+```
+
+2. Install package dependencies.
+
+```sh
+yarn or npm install
+```
+
+3. Run Cypress.
+
+```sh
+./node_modules/.bin/cypress open
+```
+
+4. Click run to the full test suite within the Cypress UI.
+
+*Remember: When changing back to the main or publish branch, you must reinstall the package dependencies as they are different.*
+
+### Production Testing
+
+#### Brief
+
+*The purpose of this segment is to gauge the user response of the application, and get close to objective feedback on it’s form and function. The results will be used to make changes that will in future, improve the experience for users.*
+
+#### Framework:
+
+1. Alpha testers of the application will be asked to perform specific tasks on the platform with minimal aid. 
+1. The testers will be asked to answer the following questions, which will get compiled into a spread-sheet.
+1. **We also do our own tests here.**
+1. The results will be analyzed, and any issues, discovered bugs or improvements will be noted and queued for implementation.
+1. The corrective actions, if any, will be implemented. 
+1. The same testers will be asked if the area of concern was adequately addressed, if not, the process repeats from step 4.
+
+#### User Questions:
+
+**(Based on the website in production)**
+
+| Category                                           | Questions                                                                                                                                                                                                                                                                                     | 
+| -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | 
+| **Aesthetic:**<br> *(looks good)*                            | - Does the application look good, if not, why? <br>- Is the color scheme appealing?                                                                                                                                                                                                           | 
+| **Accessible:**<br> *(easy to read)*                         | - Is the text on the webpage readable?<br>- Are the navigation and titles obvious enough?                                                                                                                                                                                                     | 
+| **Efficient:**<br> *(fast to use)*                           | - Is it easy to access a specific part of the application?<br>- How long does it take to create a project?<br>- How long does it take to create a ticket?                                                                                                                                     | 
+| **Effective:**<br> *(achieves the intended function)*        | - Does this application do what it says it does?<br>- How well could this website be used as a bug tracker?<br>- What is missing from this application that would improve its ability to track bugs?                                                                                          | 
+| **Intuitive:**<br> *(easy to understand)*                    | - How much instruction would you need to navigate this website a second time around?<br>- Is there anything about this website that doesn’t make sense?<br>- Are there any elements that act unexpectedly?                                                                                    | 
+| **Quick:**<br> *(loads in quickly)*                          | - How fast did the page load in on the first load?<br>- Does the website respond fast enough to be considered quick?<br>- Are there any areas of the website that seem slower than acceptable?                                                                                                | 
+| **Responsive:**<br> *(works well on multiple sized devices)* | - Was the website comfortable to use on a mobile phone? Did anything break or not seem right?<br>- Was the website comfortable to use on a tablet? Did anything break or not seem right?<br>- Did the website work well on a Desktop sized screen?<br>- Did anything break or not seem right? | 
+| **Rigid:**<br> *(can handle rough use)*                      | - When rapidly clicking through the website, did any action cause a page load error?<br>- Were any of the links broken when clicked repeatedly?<br>- Does the website feel like it is resilient to user error?                                                                                |                                                |                                                                                                                                                                                                                                                                                               |     |
+
+#### Analysis
+
+***Our Analysis: (taken more lightly than user analysis)***
+
+**NB:** *Some areas were left out, as our opinion would not be helpful.*
+
+**Accessible:**
+
+- Running a Lighthouse test from the Chrome developer tools suite gave us two measurements for accessibility.
+	- For Desktop 100% accessibility.
+		- We achieved this through giving all text to the images we used, and following good coding conventions.
+	- For Mobile 92% accessibility.
+		- This was due to some aria labels being left blank, and the meta-description of the site not being picked up.
+	- Visually, both Ryan and myself took text visibility to be an important part of the website, and as such feel the website is highly accessible.
+		- If someone were colorblind to the green and blue spectrum, there would still be enough brightness-contrast to navigate the site effectively.
+		- When asking a green-blue colourblind friend they stated “It’s a bit rough, but I can read everything on screen”
+
+**Quick:**
+
+We as a team understand that more could be done to improve the speed of the website loading, however, due to time constraints we are happy with the product speed as it is.
+
+![Screenshot-Lighthouse-Desktop](./docs/2021-07-25-LighthouseReport-Desktop.png)
+
+![Screenshot-Lighthouse-Mobile](./docs/2021-07-25-LighthouseReport-Mobile.png)
+
+From the screenshots above, it’s clear to see that performance is only a real issue for mobile devices. The performance scores 69 out of a possible 100 for performance on a, which isn’t great.
+
+A great deal of this score is about the initial load time. This isn’t great, but since this is a React application, once the initial load is done, most other pages load very fast, even when communicating with a free-tier Heroku server. Hence, we accept the performance as is.
+
+**Responsive:**
+
+Our website was designed with Mobile first in mind, we feel that we accomplished a front-end that is fairly uniform in design across all screen sizes.
+
+This website isn’t however dynamically responsive, changing the display ratio while logged in and viewing a project will have side effects on the sidebar. There is a fix for the error that occurs, but it has been decided that not many users will pressure test the application by changing the screen-size from mobile to desktop and back, and therefore it shouldn’t be a big issue.
+
+***User Analysis:***
+
+[User Production Testing Sheet](https://docs.google.com/spreadsheets/d/15mNgHvVC2BWIGPCBESgsfsc-nPxbXduXogZdPVIscjE/edit?usp=sharing )
+
+**Outstanding Comments:**
+
+The reviewer had a few comments, but overall found using the website to be a positive and intuitive experience. They liked the color choices, found the movement between pages to be good, and overall thought the application was a good solution to the problem outlined to them.
+
+There were a few things pointed out that the reviewer didn’t like. 
+
+- They thought the navigation bar links weren’t obvious enough, when hovered over.
+- They thought the logon time was too slow between clicking a sample user and getting to the dashboard.
+- They noted that refreshing the page caused an error, and made them have to go back to the original link.
+
+**Corrective Actions**
+
+We changed the hover link color to be the active theme color, which we agree stands out much better against the rest of the navigation bar. The speed of loading issue is entirely due to the load time of the Heroku server, which cannot be upgraded freely, and therefore as a team, we have decided it isn't worth fixing.
+
+The pickup on the page refresh issue was very helpful, it was a common problem for react SPAs hosted on Netlify, and was rather easy to fix using a `_redirects` file located in the public directory.
+
+#### Conclusion
+Many of the issues noticed by our reviewer were addressed immediately, and contributed to a much nicer and more functional production application. The reviewer who saw the application before and after the advice had been acted upon was impressed by the improvement, which gave us confidence the application would be better accepted by further testers.
 
 ## Entity Relationship Diagram
 
-![Entity Relationship Diagram](docs/2021-07-16-ERD.png)
+![Entity Relationship Diagram](docs/2021-07-25-ERD.png)
 
 ## Dataflow Diagram
 
@@ -287,56 +402,83 @@ When the person responsible for a task deems it as complete, they move it to "pe
 
 In this way, we are both across progress in the project, and the entirety of our scope of work. The separation of project boards allows us to assign ownership both at a task level and at a project level for different components.
 
+**End of Project Ammendment:**
+
+Ultimately as the project progressed it became much less effective to work over one anothers code bases. As a result, while we participated in some pair coding, particularly for the resolution of difficult bugs. We primarily stuck to our own domain. With Dean working in the front-end implementaion, and Ryan on the back-end.
+
+With that exception, and a general loosening of our git pull workflow, to a feature branch oriented methodology. The above remains accurate. We frequently checked in and knew what blockers the other team member was experiencing, as well as upgrades that needed to be performed in our relative domains to facilitate the other team members implementation.
+
 ### Screenshots - Project Documentation
 
 **2021-11-07 Morning**
-![2021-07-11-Screenshot-Trello-Morning](./docs/2021-07-11-Screenshot-Trello-PD.png)
+![2021-07-11-Screenshot-Trello Project Documentation Morning](./docs/2021-07-11-Screenshot-Trello-PD.png)
 
 **2021-11-07 Afternoon**
-![2021-07-11-Screenshot-Trello-Afternoon](./docs/2021-07-11-Screenshot-Trello-PD1.png)
+![2021-07-11-Screenshot-Trello Project Documentation Afternoon](./docs/2021-07-11-Screenshot-Trello-PD1.png)
 
 **2021-12-07 Morning**
-![2021-07-12-Screenshot-Trello-Morning](./docs/2021-07-12-Screenshot-Trello-PD.png)
+![2021-07-12-Screenshot-Trello Project Documentation Morning](./docs/2021-07-12-Screenshot-Trello-PD.png)
 
 **2021-12-07 Afternoon**
-![2021-07-12-Screenshot-Trello-Afternoon](./docs/2021-07-12-Screenshot-Trello-PD1.png)
+![2021-07-12-Screenshot-Trello Project Documentation Afternoon](./docs/2021-07-12-Screenshot-Trello-PD1.png)
 
 **2021-16-07 Afternoon**
-![2021-07-16-Screenshot-Trello-Afternoon](./docs/2021-07-16-Screenshot-Trello-PD1.png)
+![2021-07-16-Screenshot-Trello Project Documentation Afternoon](./docs/2021-07-16-Screenshot-Trello-PD1.png)
+
+**2021-25-07**
+![2021-07-25-Screenshot-Trello Project Documentation](./docs/2021-07-25-Screenshot-Trello-PD.png)
 
 ### Screenshots - Front-End
 
 **2021-13-07 Morning**
-![2021-07-13-Screenshot-Trello-Morning](./docs/2021-07-13-Screenshot-Trello-FE1.png)
+![2021-07-13-Screenshot-Trello Frontend Morning](./docs/2021-07-13-Screenshot-Trello-FE1.png)
 
 **2021-13-07 Afternoon**
-![2021-07-13-Screenshot-Trello-Afternoon](./docs/2021-07-13-Screenshot-Trello-FE2.png)
+![2021-07-13-Screenshot-Trello Frontend Afternoon](./docs/2021-07-13-Screenshot-Trello-FE2.png)
 
 **2021-14-07 Morning**
-![2021-07-14-Screenshot-Trello-Morning](./docs/2021-07-14-Screenshot-Trello-FE1.png)
+![2021-07-14-Screenshot-Trello Frontend Morning](./docs/2021-07-14-Screenshot-Trello-FE1.png)
 
 **2021-14-07 Afternoon**
-![2021-07-14-Screenshot-Trello-Afternoon](./docs/2021-07-14-Screenshot-Trello-FE2.png)
+![2021-07-14-Screenshot-Trello Frontend Afternoon](./docs/2021-07-14-Screenshot-Trello-FE2.png)
 
 **2021-15-07 Morning**
-![2021-07-15-Screenshot-Trello-Morning](./docs/2021-07-15-Screenshot-Trello-FE1.png)
+![2021-07-15-Screenshot-Trello Frontend Morning](./docs/2021-07-15-Screenshot-Trello-FE1.png)
 
 **2021-15-07 Afternoon**
-![2021-07-15-Screenshot-Trello-Afternoon](./docs/2021-07-15-Screenshot-Trello-FE2.png)
+![2021-07-15-Screenshot-Trello Frontend Afternoon](./docs/2021-07-15-Screenshot-Trello-FE2.png)
 
 **2021-16-07 Morning**
-![2021-07-16-Screenshot-Trello-Morning](./docs/2021-07-16-Screenshot-Trello-FE1.png)
+![2021-07-16-Screenshot-Trello Frontend Morning](./docs/2021-07-16-Screenshot-Trello-FE1.png)
 
 **2021-16-07 Afternoon**
-![2021-07-16-Screenshot-Trello-Afternoon](./docs/2021-07-16-Screenshot-Trello-FE2.png)
+![2021-07-16-Screenshot-Trello Frontend Afternoon](./docs/2021-07-16-Screenshot-Trello-FE2.png)
+
+**2021-19-07**
+![2021-07-19-Screenshot-Trello Frontend](./docs/2021-07-19-Screenshot-Trello-FE.png)
+
+**2021-24-07**
+![2021-07-24-Screenshot-Trello Frontend](./docs/2021-07-24-Screenshot-Trello-FE.png)
 
 ### Screenshots - Back-End
 
 **2021-15-07**
-![2021-07-13-Screenshot-Trello](./docs/2021-07-15-Screenshot-Trello-BE.png)
+![2021-07-13-Screenshot-Trello Backend](./docs/2021-07-15-Screenshot-Trello-BE.png)
 
 **2021-16-07 Morning**
-![2021-07-13-Screenshot-Trello-Morning](./docs/2021-07-16-Screenshot-Trello-BE.png)
+![2021-07-13-Screenshot-Trello Backend Morning](./docs/2021-07-16-Screenshot-Trello-BE.png)
 
 **2021-16-07 Afternoon**
-![2021-07-13-Screenshot-Trello-Afternoon](./docs/2021-07-16-Screenshot-Trello-BE2.png)
+![2021-07-13-Screenshot-Trello Backend Afternoon](./docs/2021-07-16-Screenshot-Trello-BE2.png)
+
+**2021-18-07**
+![2021-07-18-Screenshot-Trello Backend](docs/2021-07-18-Screenshot-Trello-BE.png)
+
+**2021-20-07**
+![2021-07-20-Screenshot-Trello Backend](docs/2021-07-20-Screenshot-Trello-BE.png)
+
+**2021-23-07**
+![2021-07-23-Screenshot-Trello Backend](docs/2021-07-23-Screenshot-Trello-BE.png)
+
+**2021-25-07**
+![2021-07-25-Screenshot-Trello Backend](docs/2021-07-25-Screenshot-Trello-BE.png)
